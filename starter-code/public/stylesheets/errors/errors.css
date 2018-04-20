@@ -1,0 +1,25 @@
+  .not-found {
+    margin: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 45px;
+    color: white;
+  };
+
+    .error {
+    color: white;
+    margin: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 45px;
+
+  };
+
+    body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://files.slack.com/files-pri/T02CQ4EN4-FAA6D830U/screen_shot_2018-04-20_at_16.16.04.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+  };
