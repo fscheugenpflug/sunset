@@ -1,0 +1,32 @@
+  #notfound-background {
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/errors/not-found.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .notfound {
+    margin: 15vh;
+    text-transform: uppercase;
+    max-width: 30vh;
+    font-weight: 900;
+    font-size: 3vh;
+    line-height: 3.6vh;
+    color: white;
+  }
+
+  #error-background {
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/errors/not-found.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+    .error {
+    color: white;
+    margin: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 45px;
+
+  };

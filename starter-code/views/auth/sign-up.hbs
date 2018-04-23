@@ -1,0 +1,37 @@
+{{!-- connect specific css --}}
+
+<head>
+  <link rel='stylesheet' href='/stylesheets/sign-up.css' />
+</head>
+
+{{!-- body --}}
+
+<body id="sign-up-background">
+
+  <div class="sign-up-box">
+
+   <form action="/auth/sign-up" method="POST" class="sign-up">
+      <div>
+        <label>Name</label>
+        <input placeholder="Name" name="name" type="text">
+      </div>
+      <div>
+        <label>E-Mail</label>
+        <input placeholder="E-mail Adress" name="email" type="text">
+      </div>
+      <div>
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Enter Username">
+      </div>
+      <div>
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter Password">
+      </div>
+      <div>
+        <button type="submit">Sign up</button>
+      </div>
+      <a href="/">Already a Member?</a>
+    </form>
+  </div>
+
+</body>
