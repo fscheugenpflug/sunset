@@ -11,14 +11,11 @@ router.get('/', (req, res, next) => {
   res.render('auth/login', { title: 'Express' });
 });
 
-router.get('/auth/sign-up', (req, res, next) => {
+router.get('/sign-up', (req, res, next) => {
   res.render('auth/sign-up', { title: 'Express' });
 });
 
 /* GET users listing. */
-router.get('/auth/sign-up', (req, res, next) => {
-  res.render('auth/sign-up');
-});
 
 router.post('/sign-up', (req, res, next) => {
   const name = req.body.name;

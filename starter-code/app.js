@@ -12,7 +12,7 @@ const MongoStore = require('connect-mongo')(session);
 const index = require('./routes/index');
 const auth = require('./routes/auth');
 const usersRouter = require('./routes/users');
-// const selection = require('./routes/selection');
+const selection = require('./routes/selections');
 
 const app = express();
 
@@ -62,7 +62,7 @@ app.use((req, res, next) => {
 app.use('/', index);
 app.use('/users', usersRouter);
 app.use('/auth', auth);
-// app.use('/selection', selection);
+app.use('/', selection);
 
 // -- 404 and error handler
 
