@@ -1,0 +1,170 @@
+.nav {
+  height: 50px;
+  width: 100%;
+  background: rgba(0, 66, 37, 0.8);
+  position: relative;
+  border-bottom: 1px solid black;
+  z-index: 6;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav-title a {
+  text-decoration: none;
+  color:black;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: black;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+
+
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) + .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked + .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+} 
+
+
+
+
+/* ------ sections on dashboard ------- */
+
+
+.team-header {
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  
+
+ 
+}
+
+.team-logo {
+  max-width: 350px;
+  opacity: 0.7;
+  padding-top: 5%;
+}
+
+.team-header-text {
+  color: rgba(0, 66, 37, 0.8);
+  font-size: 40px;
+  text-transform: uppercase;
+ 
+}
+
+hr {
+  width: 70%;
+  height: 5px;
+  background: grey;
+  border-radius: 20%;
+  margin-top: 5%;
+}
+
+
+.team-information {
+ margin-top: -50px;
+padding-top: 50px;
+
+box-sizing: border-box;
+}
+.sideBar {
+  overflow:hidden;
+  background: yellow;
+}
+
+.content {
+  float:left;
+  width: 70vw;
+  background: aqua;
+  padding: 20px;
+  
+}
+ .team-information h1 {
+   text-align: center;
+ }
+
+ h2 {
+  color: rgba(0, 66, 37, 0.8);
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+

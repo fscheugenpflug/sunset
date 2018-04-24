@@ -20,4 +20,12 @@ router.post('/dashboard', (req, res, next) => {
     .catch(next);
 });
 
+router.get('/statistics', (req, res, next) => {
+  res.render('userinterface/statistics');
+});
+
+router.get('/upcoming', (req, res, next) => {
+  res.render('userinterface/upcoming');
+});
+
 module.exports = router;
