@@ -7,7 +7,7 @@ const User = require('../models/user-data.js');
 
 // /* GET home page. */
 router.get('/dashboard', (req, res, next) => {
-  res.render('userinterface/dashboard', { title: 'Express' });
+  res.render('userinterface/dashboard');
 });
 
 router.post('/dashboard', (req, res, next) => {

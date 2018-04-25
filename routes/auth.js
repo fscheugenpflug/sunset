@@ -29,7 +29,7 @@ router.post('/sign-up', (req, res, next) => {
     .then((result) => {
       if (result) {
         console.log('Username is taken');
-        res.redirect('auth/sign-up');
+        res.redirect('sign-up');
       } else {
         const newUser = new User({
           name,
@@ -64,7 +64,7 @@ router.post('/login', (req, res, next) => {
         res.redirect('/auth/login');
       } else if (bcrypt.compareSync(password, result.password)) {
         req.session.currentUser = result;
-        res.redirect('home');
+        res.redirect('../dashboard');
       }
     })
     .catch(next);
