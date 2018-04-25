@@ -14,7 +14,3 @@ console.log(team[i]);
 //   .catch((error) => {
 //     console.log(error);
 //   });
-
-<form action="/auth/logout" method="post">
-  <button>Log out</button>
-</form>;
