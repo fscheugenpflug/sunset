@@ -7,12 +7,13 @@ const User = require('../models/user-data.js');
 const bcryptSalt = 10;
 
 /* GET home page. */
-router.get('/', (req, res, next) => {
-  res.render('auth/login', { title: 'Express' });
-});
 
 router.get('/sign-up', (req, res, next) => {
-  res.render('auth/sign-up', { title: 'Express' });
+  if (req.session.currentUser) {
+    res.redirect('userinterface/dashboard');
+  } else {
+    res.render('auth/sign-up');
+  }
 });
 
 /* GET users listing. */
@@ -51,7 +52,11 @@ router.post('/sign-up', (req, res, next) => {
 });
 
 router.get('/login', (req, res, next) => {
-  res.render('auth/login');
+  if (req.session.currentUser) {
+    res.redirect('userinterface/dashboard');
+  } else {
+    res.render('auth/login');
+  }
 });
 
 router.post('/login', (req, res, next) => {
@@ -72,10 +77,7 @@ router.post('/login', (req, res, next) => {
 
 router.get('/team-selection', (req, res, next) => {
   if (req.session.currentUser) {
-    const data = {
-      hack: true
-    };
-    res.render('selection/team-selection', data);
+    res.render('selection/team-selection', { layout: false });
   } else {
     res.redirect('/');
   }

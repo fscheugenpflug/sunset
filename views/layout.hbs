@@ -5,11 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/sign-up.css' />
+    <link rel='stylesheet' href='/stylesheets/login.css' />
+    <link rel='stylesheet' href='/stylesheets/errors.css' />
+    <link rel='stylesheet' href='/stylesheets/errors.css' />
+    <link rel='stylesheet' href='/stylesheets/starter-page.css' />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
   </head>
   <body>
     {{#if user}}
-    {{#unless hack}}
       <div class="nav">
         <div class="nav-header">
           <div class="nav-title">
@@ -28,12 +32,12 @@
           <a href="/dashboard">My Team</a>
           <a href="/statistics">Statistics</a>
           <a href="/upcoming">Upcoming</a>
+          <a href="/auth/team-selection">Update my Team</a>
           <form action="/auth/logout" method="post">
             <button>Log out</button>
           </form>
         </div>
       </div>
-      {{/unless}}
     {{/if}}
 
     {{{body}}}
