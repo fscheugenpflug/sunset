@@ -17,27 +17,11 @@ router.get('/dashboard', (req, res, next) => {
 router.post('/dashboard', (req, res, next) => {
   let selectedTeam = req.body.team;
   let user = req.session.currentUser._id;
-  User.findOneAndUpdate({_id: user}, {$set: {team: selectedTeam}})
+  User.findOneAndUpdate({ _id: user }, { $set: { team: selectedTeam } })
     .then(() => {
-      res.json({redirect: 'http://localhost:3000/dashboard'});
+      res.json({ redirect: 'http://localhost:3000/dashboard' });
     })
     .catch(next);
-});
-
-router.get('/statistics', (req, res, next) => {
-  if (req.session.currentUser) {
-    res.render('userinterface/statistics');
-  } else {
-    res.redirect('/');
-  }
-});
-
-router.get('/upcoming', (req, res, next) => {
-  if (req.session.currentUser) {
-    res.render('userinterface/upcoming');
-  } else {
-    res.redirect('/');
-  }
 });
 
 module.exports = router;

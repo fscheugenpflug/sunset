@@ -13,6 +13,7 @@ const index = require('./routes/index');
 const auth = require('./routes/auth');
 const usersRouter = require('./routes/users');
 const selection = require('./routes/selections');
+const userinterface = require('./routes/user-interface');
 
 const app = express();
 
@@ -63,6 +64,7 @@ app.use('/', index);
 app.use('/users', usersRouter);
 app.use('/auth', auth);
 app.use('/', selection);
+app.use('/', userinterface);
 
 // -- 404 and error handler
 
