@@ -72,7 +72,10 @@ router.post('/login', (req, res, next) => {
 
 router.get('/team-selection', (req, res, next) => {
   if (req.session.currentUser) {
-    res.render('selection/team-selection');
+    const data = {
+      hack: true
+    };
+    res.render('selection/team-selection', data);
   } else {
     res.redirect('/');
   }

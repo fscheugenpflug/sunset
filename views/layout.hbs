@@ -8,29 +8,33 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
   </head>
   <body>
+    {{#if user}}
+    {{#unless data}}
+      <div class="nav">
+        <div class="nav-header">
+          <div class="nav-title">
+            <a href="/dashboard"> sunSet</a>
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <input type="checkbox" id="nav-check">
+        <div class="nav-links">
+          <a href="/dashboard">My Team</a>
+          <a href="/statistics">Statistics</a>
+          <a href="/upcoming">Upcoming</a>
+          <a href="#">Log out</a>
 
-<div class="nav">
-  <div class="nav-header">
-    <div class="nav-title">
-      <a href="/dashboard"> sunSet</a>
-    </div>
-  </div>
-  <div class="nav-btn">
-    <label for="nav-check">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-  </div>
-  <input type="checkbox" id="nav-check">
-  <div class="nav-links">
-    <a href="/dashboard">My Team</a>
-    <a href="/statistics">Statistics</a>
-     <a href="/upcoming">Upcoming</a>
-    <a href="#">Log out</a>
+        </div>
+      </div>
+      {{/unless}}
+    {{/if}}
 
-  </div>
-</div>
     {{{body}}}
   </body>
 </html>
