@@ -58,7 +58,7 @@ h1{
   background: rgba(0, 66, 37, 0.5);
   color: #fff;
   font-size: 18px;
-  border-radius: 20px;
+  border-radius: none;
 }
 
 .sign-up-box button[type="submit"]:hover{

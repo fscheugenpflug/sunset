@@ -50,7 +50,7 @@ router.post('/sign-up', (req, res, next) => {
     });
 });
 
-router.get('/', (req, res, next) => {
+router.get('/login', (req, res, next) => {
   res.render('auth/login');
 });
 
@@ -61,7 +61,7 @@ router.post('/login', (req, res, next) => {
   User.findOne({ username: username })
     .then(result => {
       if (!result) {
-        res.redirect('/');
+        res.redirect('/auth/login');
       } else if (bcrypt.compareSync(password, result.password)) {
         req.session.currentUser = result;
         res.redirect('home');

@@ -1,8 +1,20 @@
-<div class="start">Team Selection</div>
+{{!-- connect specific css --}}
+
+<head>
+  <link rel='stylesheet' href='/stylesheets/search-theme.css' />
+</head>
+
+{{!-- body --}}
 
 {{!-- <input type="text" placeholder="Search"></input> --}}
 
-<input type="text" id="team-search" name="team">
-<button type="submit" class="search-btn">Search</button>
-
+<body id="search-background">
+  <div class="search-box">
+    <h1>Team Selection</h1>
+    <div class="search-bar">
+      <input type="text" id="team-search" name="team" placeholder="Search for your team">
+    </div>
+      <button type="submit" class="search-btn">Search</button>
+  </div>
+</body>
 <script src="/javascripts/selections.js"></script>

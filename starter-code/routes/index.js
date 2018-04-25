@@ -5,7 +5,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.render('auth/login', { title: 'Express' });
+  res.render('starter-page', { title: 'Express' });
 });
 
 module.exports = router;
