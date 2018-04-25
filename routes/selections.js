@@ -7,7 +7,12 @@ const User = require('../models/user-data.js');
 
 // /* GET home page. */
 router.get('/dashboard', (req, res, next) => {
-  res.render('userinterface/dashboard');
+  if (req.session.currentUser) {
+    const data = { hack: true };
+    res.render('userinterface/dashboard', data);
+  } else {
+    res.redirect('/');
+  }
 });
 
 router.post('/dashboard', (req, res, next) => {
@@ -21,11 +26,21 @@ router.post('/dashboard', (req, res, next) => {
 });
 
 router.get('/statistics', (req, res, next) => {
-  res.render('userinterface/statistics');
+  if (req.session.currentUser) {
+    const data = { hack: true };
+    res.render('userinterface/statistics', data);
+  } else {
+    res.redirect('/');
+  }
 });
 
 router.get('/upcoming', (req, res, next) => {
-  res.render('userinterface/upcoming');
+  if (req.session.currentUser) {
+    const data = { hack: true };
+    res.render("userinterface/upcoming'", data);
+  } else {
+    res.redirect('/');
+  }
 });
 
 module.exports = router;

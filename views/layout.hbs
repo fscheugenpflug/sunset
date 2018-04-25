@@ -9,7 +9,7 @@
   </head>
   <body>
     {{#if user}}
-    {{#unless data}}
+    {{#unless hack}}
       <div class="nav">
         <div class="nav-header">
           <div class="nav-title">
@@ -28,11 +28,9 @@
           <a href="/dashboard">My Team</a>
           <a href="/statistics">Statistics</a>
           <a href="/upcoming">Upcoming</a>
-        <form action="/auth/logout" method="post">
-          <button>Log out</button>
-        </form>;
-
-
+          <form action="/auth/logout" method="post">
+            <button>Log out</button>
+          </form>
         </div>
       </div>
       {{/unless}}
