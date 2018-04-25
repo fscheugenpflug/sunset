@@ -22,7 +22,7 @@ function main () {
           if (teamInputUpdated === a.strTeam) {
             console.log('correct');
 
-            axios.post('/dashboard', {team: teamInput})
+            axios.post('/dashboard', {team: teamInputUpdated})
               .then((result) => {
                 window.location.href = result.data.redirect;
               });
