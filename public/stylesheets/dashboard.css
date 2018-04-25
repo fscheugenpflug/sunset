@@ -136,7 +136,7 @@ color: black;
   text-align: center;
 
      /* The image used */
-     background-image: url('http://clickwallpapers.com/1080p/sports-wallpaper-widescreen-On-Wallpaper-1080p-HD.jpg');
+     background-image: url('/images/dashboard.jpg');
 
      /* Full height */
      height: 100%; 
