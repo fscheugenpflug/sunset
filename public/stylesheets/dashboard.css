@@ -171,7 +171,7 @@ hr {
   height: 5px;
   background: grey;
   border-radius: 20%;
-  margin-top: 5%;
+  margin: 5%  auto 0 auto;
 }
 
 
@@ -247,4 +247,27 @@ clear: both;
 .stadium {
   max-width: 84vw;
   min-height: 300px;
+}
+
+
+
+/* upcoming page */
+
+.vs {
+  font-size: 5em;
+  text-align: center;
+}
+
+.container-teams {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 15vh;
+  
+
+}
+
+.container-teams > span {
+  width: 33%;
 }
