@@ -4,15 +4,21 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user-data.js');
 const QRCode = require('qrcode');
+var base64Img = require('base64-img');
 
-// QRCode.toDataURL(seq) // also the link hast to be included
-//   .then(url => {
-//     console.log(url);
-//   })
-//   .catch(err => {
-//     console.error(err);
-//   });
-// const segs = [{ data: 'req.session.currentUser' }, { data: "http://localhost:3000/dashboard" }];
+QRCode.toDataURL('https://sunsetsports.herokuapp.com/auth/login')
+  .then(url => {
+    base64Img.img(url, 'public/images/auth/qrcode', 'qrcode', (err, filepath) => {
+      if (err) {
+        console.log(err);
+      }
+    }
+    );
+  })
+  .catch(err => {
+    console.error(err);
+  });
+// const segs = [{ data: 'req.session.currentUser' }, { data: "https://sunsetsports.herokuapp.com/dashboard" }];
 
 router.post('/dashboard', (req, res, next) => {
   res.json({redirect: 'http://localhost:3000/dashboard'});
