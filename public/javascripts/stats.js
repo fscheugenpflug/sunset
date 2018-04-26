@@ -31,15 +31,15 @@ function standingsInfo (league_id) {
         const loss = document.createElement('div');
         loss.innerText = tableElement[index].loss;
         teamContainer[index][index].appendChild(loss);
-        const total = document.createElement('div');
-        total.innerText = tableElement[index].total;
-        teamContainer[index][index].appendChild(total);
         const goalsfor = document.createElement('div');
         goalsfor.innerText = tableElement[index].goalsfor;
         teamContainer[index][index].appendChild(goalsfor);
         const goalsagainst = document.createElement('div');
         goalsagainst.innerText = tableElement[index].goalsagainst;
         teamContainer[index][index].appendChild(goalsagainst);
+        const total = document.createElement('div');
+        total.innerText = tableElement[index].total;
+        teamContainer[index][index].appendChild(total);
       });
     })
     .catch(error => {
