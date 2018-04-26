@@ -254,7 +254,7 @@ clear: both;
 /* upcoming page */
 
 .vs {
-  font-size: 5em;
+  font-size: 2em;
   text-align: center;
 }
 
@@ -263,11 +263,17 @@ clear: both;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 15vh;
+  height: 25vh;
+  max-width: 980px;
+  margin: 0 auto;
   
 
 }
 
 .container-teams > span {
-  width: 33%;
+  
+}
+
+.badgeimg {
+  height: 150px;
 }
