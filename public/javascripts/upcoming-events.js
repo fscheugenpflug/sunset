@@ -12,7 +12,7 @@ function mainTeamEvents (team_id) {
       let homeGameId = [];
       let homeTeam = [];
       let awayTeam = [];
-      let homeTeamColor = [];
+      let gameDate = [];
       let allPromises = {
         homeTeam: [],
         awayTeam: []
@@ -28,6 +28,7 @@ function mainTeamEvents (team_id) {
         homeTeam.push(response.data.events[i].strHomeTeam);
         awayTeam.push(response.data.events[i].strAwayTeam);
         homeGameId.push(response.data.events[i].idHomeTeam);
+        gameDate.push(response.data.events[i].strDate);
 
         allPromises.homeTeam.push(axios.get(teamApi + homeTeam[i]));
         allPromises.awayTeam.push(axios.get(teamApi + awayTeam[i]));
@@ -44,13 +45,15 @@ function mainTeamEvents (team_id) {
 
             let teamElement = document.createElement('div');
             let domContainers = `<div class="container-teams">
-                <img  class="badgeimg" src="${homeBadge}">
-                <span class="vs">vs</span>
-                <img class="badgeimg" src="${awayBadge}">
-                </div>`;
+          <img  class="badgeimg" src="${homeBadge}">
+          <span class="vs">vs <br> ${gameDate[0]}</span>
+          
+          <img class="badgeimg" src="${awayBadge}">
+          </div>`;
             teamElement.innerHTML = domContainers;
             document.getElementById('up-coming-events').appendChild(teamElement.firstChild);
           });
+          console.log(gameDate);
         });
     })
     .catch(error => {
