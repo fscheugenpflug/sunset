@@ -213,9 +213,7 @@ h4 {
   flex-direction: column;
   align-items: center;
 }
-.qr {
-  
-}
+
 
 
 footer {
@@ -253,9 +251,18 @@ clear: both;
 
 /* upcoming page */
 
+
+#league {
+
+  font-size: 2.5em;
+  color: rgba(0, 66, 37, 0.8);
+  padding-top: 3vh;
+}
 .vs {
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .container-teams {
@@ -270,10 +277,53 @@ clear: both;
 
 }
 
+#up-coming-events {
+  background-image: url("/images/background-upcoming.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .container-teams > span {
   
 }
 
 .badgeimg {
   height: 150px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  font-size: 1.4em;
+}
+
+.team-container > div {
+  width: 30%;
+  background: grey;
+  height: 5vh;
+}
+
+.stat-titles {
+  display: flex;
+  justify-content: space-around;
+  
+  text-align: center;
+}
+
+.stat-titles > h3 {
+  width: 30%;
+  font-size: 1.8em;
+  
+}
+.tb-layout {
+  padding-bottom: 3vh;
+}
+
+.standing {
+  font-size: 2.5em;
+  padding-top: 3vh;
 }

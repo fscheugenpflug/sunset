@@ -60,7 +60,7 @@ h1{
   font-size: 16px;
 }
 
-.login-box > button{
+.login-box  button{
   width: 100%;
   margin-bottom: 20px;
   border: none;
@@ -72,7 +72,7 @@ h1{
   border-radius: none; /* 20px before */
 }
 
-.login-box > button[type="submit"]:hover{
+.login-box  button[type="submit"]:hover{
   cursor: pointer;
   background: #39dc79;
   color: #000;
