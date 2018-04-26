@@ -257,6 +257,14 @@ clear: both;
   font-size: 2.5em;
   color: rgba(0, 66, 37, 0.8);
   padding-top: 3vh;
+  line-height: 35px;
+}
+
+.home-away-team {
+  max-width: 980px;
+  display: flex;
+  justify-content: flex-start;
+  
 }
 .vs {
   font-size: 3em;
