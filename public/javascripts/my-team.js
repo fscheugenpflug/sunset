@@ -8,7 +8,7 @@ function mainTeamInfo (team, league_id, team_id) {
     .get(teamApi + team)
     .then(response => {
       console.log(response);
-      
+
       const badgeTeam = document.querySelector('.team-logo');
       badgeTeam.src = response.data.teams[0].strTeamBadge;
       const teamGi = document.querySelector('#team-gi');
@@ -29,8 +29,8 @@ function mainTeamInfo (team, league_id, team_id) {
       const aTag = document.querySelectorAll('a');
       const aTagParentElement = document.querySelector('.team-social-network');
       aTag.forEach((element, index) => {
-        if (aTag[index]href === '') {
-          aTagParentElement.removeChild(aTag[index])
+        if (aTag[index].href === '') {
+          aTagParentElement.removeChild(aTag[index]);
         }
       });
     })
