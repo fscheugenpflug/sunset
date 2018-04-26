@@ -162,7 +162,8 @@ color: black;
   color: rgba(0, 66, 37, 0.8);
   font-size: 40px;
   text-transform: uppercase;
-   line-height: 1.2em;
+  line-height: 1.2em;
+  padding-top: 1.2%;
 }
 
 hr {
@@ -176,7 +177,7 @@ hr {
 
 .team-information {
  margin-top: -50px;
-padding: 5%;
+ padding: 8%;
 
 
 box-sizing: border-box;
@@ -240,9 +241,10 @@ clear: both;
   justify-content: center;
   flex-direction: center;
   align-items: center;
+  padding-top: 3%
 }
 
 .stadium {
-  max-width: 90vw;
+  max-width: 84vw;
   min-height: 300px;
 }

@@ -2,10 +2,7 @@
 
 function mainTeamInfo (team) {
   const teamApi = 'https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=';
-  const teamInfoTotal = team;
 
-  const aElement = document.createElement('a');
-  // const searchButton = document.querySelector('.search-btn');
   axios
     .get(teamApi + team)
     .then(response => {
@@ -18,16 +15,16 @@ function mainTeamInfo (team) {
       teamSi.innerHTML = response.data.teams[0].strStadiumDescription;
       const teamStadium = document.querySelector('.stadium');
       teamStadium.src = response.data.teams[0].strStadiumThumb;
-      // const teamNetwork = document.querySelector('.team-social-network');
-      // aElement.href = response.data.teams[0].strWebsite;
-      // teamNetwork.appendChild(aElement.href);
+      const teamWeb = document.querySelector('.team-website');
+      teamWeb.href = response.data.teams[0].strWebsite;
+      const teamYoutube = document.querySelector('.team-youtube');
+      teamYoutube.href = response.data.teams[0].strYoutube;
+      const teamFace = document.querySelector('.team-facebook');
+      teamFace.href = response.data.teams[0].strFacebook;
+      const teamInstagramm = document.querySelector('.team-instagramm');
+      teamInstagramm.href = response.data.teams[0].strInstagram;
     })
     .catch(error => {
       console.log(error);
     });
 }
-
-//     const form = document.querySelector('form');
-//     form.innerHTML += `<button class="team-selector"><img src="${a.strTeamBadge}" alt="${a.strTeam}"> </button>`;
-//   };
-// })

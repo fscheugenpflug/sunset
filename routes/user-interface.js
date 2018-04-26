@@ -3,10 +3,20 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/user-data.js');
+const QRCode = require('qrcode');
+
+// QRCode.toDataURL(seq) // also the link hast to be included
+//   .then(url => {
+//     console.log(url);
+//   })
+//   .catch(err => {
+//     console.error(err);
+//   });
+// const segs = [{ data: 'req.session.currentUser' }, { data: "http://localhost:3000/dashboard" }];
 
 router.post('/dashboard', (req, res, next) => {
-  let user = req.session.currentUser._id;
-  const selectedTeam = req.user.team;
+  // let user = req.session.currentUser._id;
+  // const selectedTeam = req.user.team;
   res.json({redirect: 'http://localhost:3000/dashboard'});
 });
 
