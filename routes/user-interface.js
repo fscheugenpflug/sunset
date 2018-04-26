@@ -15,8 +15,6 @@ const QRCode = require('qrcode');
 // const segs = [{ data: 'req.session.currentUser' }, { data: "http://localhost:3000/dashboard" }];
 
 router.post('/dashboard', (req, res, next) => {
-  // let user = req.session.currentUser._id;
-  // const selectedTeam = req.user.team;
   res.json({redirect: 'http://localhost:3000/dashboard'});
 });
 

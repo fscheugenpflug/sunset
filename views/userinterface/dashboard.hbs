@@ -25,7 +25,7 @@
     </div>
     <div class="sideBar">
       <h2 class="current-team-position">Current Positon</h2>
-      <h4>4</h4>
+      <h4></h4>
       <hr>
        <div class="qr-code">
         <canvas id="canvas"></canvas>
@@ -44,6 +44,6 @@
 
 <script>
 window.addEventListener('load', () => {
-  mainTeamInfo('{{user.team}}');
+  mainTeamInfo('{{user.team}}', '{{user.league_id}}', '{{user.team_id}}');
 });
 </script>
