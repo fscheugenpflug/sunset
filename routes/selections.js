@@ -23,7 +23,7 @@ router.post('/dashboard', (req, res, next) => {
   req.session.currentUser.league_id = req.body.league_id;
   User.findOneAndUpdate({ _id: user }, { $set: { team: selectedTeam, team_id: teamID, league_id: leagueID } })
     .then(() => {
-      res.json({ redirect: 'http://localhost:3000/dashboard' });
+      res.json({ redirect: '/dashboard' });
     })
     .catch(next);
 });
