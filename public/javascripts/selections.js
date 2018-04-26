@@ -23,7 +23,7 @@ function main () {
         axios
           .post('/dashboard', { team: teamInputUpdated, team_id: teamID, league_id: leagueID })
           .then(result => {
-            window.location.href = result.data.redirect;
+            window.location.href = window.location.origin + result.data.redirect;
           });
 
         console.log(team);

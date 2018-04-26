@@ -21,7 +21,7 @@ QRCode.toDataURL('https://sunsetsports.herokuapp.com/auth/login')
 // const segs = [{ data: 'req.session.currentUser' }, { data: "https://sunsetsports.herokuapp.com/dashboard" }];
 
 router.post('/dashboard', (req, res, next) => {
-  res.json({redirect: 'http://localhost:3000/dashboard'});
+  res.json({redirect: '/dashboard'});
 });
 
 router.get('/statistics', (req, res, next) => {
