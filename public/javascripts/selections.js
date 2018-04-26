@@ -1,7 +1,6 @@
 'use strict';
 
 function main () {
-  // const teamApi = 'https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League';
   const teamApi = 'https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=';
   const team = [];
   const searchButton = document.querySelector('.search-btn');
@@ -17,10 +16,13 @@ function main () {
     console.log(teamInputUpdated);
     axios.get(teamApi + teamInputUpdated)
       .then((response) => {
-        const a = response.data.teams[0];
+        const team = response.data.teams[0];
+        const teamID = team.idTeam;
+        const leagueID = team.idLeague;
 
-        axios.post('/dashboard', {team: teamInputUpdated})
-          .then((result) => {
+        axios
+          .post('/dashboard', { team: teamInputUpdated, team_id: teamID, league_id: leagueID })
+          .then(result => {
             window.location.href = result.data.redirect;
           });
 

@@ -24,6 +24,12 @@ const userSchema = new Schema({
   },
   team: {
     type: String
+  },
+  team_id: {
+    type: String
+  },
+  league_id: {
+    type: String
   }
 });
 
