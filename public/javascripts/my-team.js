@@ -9,8 +9,6 @@ function mainTeamInfo (team, league_id, team_id) {
     .then(response => {
       console.log(response);
 
-      const leagueTitle = response.data.teams[0].strLeague;
-      document.getElementById('pos-title').innerHTML = ' in ' + leagueTitle;
       const badgeTeam = document.querySelector('.team-logo');
       badgeTeam.src = response.data.teams[0].strTeamBadge;
       const teamGi = document.querySelector('#team-gi');
@@ -20,6 +18,8 @@ function mainTeamInfo (team, league_id, team_id) {
       const teamStadium = document.querySelector('.stadium');
       teamStadium.src = response.data.teams[0].strStadiumThumb;
       const teamWeb = document.querySelector('.team-website');
+      const leagueTitle = response.data.teams[0].strLeague;
+      document.getElementById('pos-title').innerHTML = 'in the ' + leagueTitle;
       teamWeb.setAttribute('href', `http://${response.data.teams[0].strWebsite}`);
       const teamYoutube = document.querySelector('.team-youtube');
       teamYoutube.setAttribute('href', `http://${response.data.teams[0].strYoutube}`);

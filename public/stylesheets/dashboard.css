@@ -207,25 +207,26 @@ h4 {
 }
 
 footer {
-text-align: center;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-font-size: 25px;
-padding: 20px;
-background: black;
-opacity: 0.8;
-color: white;
-clear: both;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  padding: 20px;
+  background: black;
+  opacity: 0.8;
+  color: white;
+  clear: both;
 }
 
-.team-social-network {
-  
- font-size: 3em;
- display: flex;
- align-items: center;
- justify-content: space-around;
- flex-wrap: wrap;
- padding-top: 10vh;
-  /* margin-top: 5vh */
+.team-social-network { 
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 10vh;
+  font-size: 3vh;
+  max-width: none;
+    /* margin-top: 5vh */
 }
 
 .stadium-image {
@@ -265,11 +266,10 @@ clear: both;
   font-size: 3em;
   text-align: center;
   color: white;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   line-height: 7vh;
 }
 
-.container-teams {
+.team-container-upcoming {
   text-align: center;
   display: flex;
   justify-content: space-around;
@@ -281,8 +281,9 @@ clear: both;
 
 }
 
-#up-coming-events {
-  background-image: url("/images/background-upcoming.jpg");
+#upcoming-events {
+  /* background-image: url("/images/background-upcoming.jpg"); */
+  background-color: grey;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -308,6 +309,7 @@ clear: both;
 }
 
 .team-container > div {
+  padding-top: 3vh;
   width: 12.5%;
   background-color: #eee;
   color: #444;
@@ -357,6 +359,10 @@ clear: both;
   }
   .vs {
     font-size: 1.5em;
+  } 
+  .team-container > img {
+    height: 60px;
+
   }
 }
 .tb-layout {
@@ -380,11 +386,13 @@ clear: both;
 
 #pos-title {
   line-height: 35px;
-  padding-top: 5vh;
+  padding: 5vh 0;
+  font-size: 4vh;
 }
 
 .current-team-position {
   padding-top: 5vh;
+  font-size: 6vh
 }
 
 i {
@@ -392,13 +400,17 @@ i {
 }
 
 .fa-youtube {
-  color: red;
+  color: rgb(0, 66, 37);
 }
 
 .fa-globe {
-  color: green;
+  color: rgb(0, 66, 37);
 }
 
 .fa-instagram {
-  color: RGB(138, 58, 185);
+  color: rgb(0, 66, 37);
+}
+
+.fa-facebook { 
+  color: rgb(0, 66, 37);
 }
