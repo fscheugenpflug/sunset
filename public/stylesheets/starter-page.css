@@ -113,12 +113,13 @@
 #flex-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   overflow: hidden;
 }
 
 .flex-item {
-  width: 30%;
+  width: 33%;
   border: 1px black solid;
   background: #369;
 }
@@ -131,6 +132,7 @@ h6 {
   text-transform: uppercase;
   
   
+ }
   @media only screen and (max-width: 600px) {
     .header-content {
        height: 55vh;
@@ -141,6 +143,9 @@ h6 {
     #flex-container {
       display: flex;
       flex-direction: column;
+    }
+    .flex-item {
+      width: 100%;
     }
   }
 }
