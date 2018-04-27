@@ -44,14 +44,14 @@ function mainTeamEvents (team_id) {
             const awayBadge = result[1][idx].data.teams[0].strTeamBadge;
 
             let teamElement = document.createElement('div');
-            let domContainers = `<div class="container-teams">
+            let domContainers = `<div class="team-container-upcoming">
           <img  class="badgeimg" src="${homeBadge}">
-          <span class="vs">vs <br> ${gameDate[0]}</span>
+          <span class="vs">vs <br> ${gameDate[idx]}</span>
           
           <img class="badgeimg" src="${awayBadge}">
           </div>`;
             teamElement.innerHTML = domContainers;
-            document.getElementById('up-coming-events').appendChild(teamElement.firstChild);
+            document.getElementById('upcoming-events').appendChild(teamElement.firstChild);
           });
           console.log(gameDate);
         });

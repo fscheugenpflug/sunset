@@ -12,4 +12,8 @@ router.get('/', (req, res, next) => {
   }
 });
 
+router.get('/style-guide', (req, res, next) => {
+  res.render('style-guide');
+});
+
 module.exports = router;
