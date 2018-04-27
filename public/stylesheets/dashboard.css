@@ -392,7 +392,8 @@ footer {
 
 .current-team-position {
   padding-top: 5vh;
-  font-size: 6vh
+  font-size: 6vh;
+  line-height: 35px;
 }
 
 i {
