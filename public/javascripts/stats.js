@@ -2,6 +2,7 @@
 
 function standingsInfo (league_id) {
   const standingsApi = 'https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=';
+  const teamEventApi = 'https://www.thesportsdb.com/api/v1/json/1/eventsnext.php?id=';
 
   axios
     .get(standingsApi + league_id)
@@ -9,6 +10,8 @@ function standingsInfo (league_id) {
       console.log(response);
       const tableDiv = document.querySelector('.standing-table');
       const tableElement = response.data.table;
+      const leagueId = response.data.table[0].teamid;
+      console.log(leagueId);
       const teamContainer = [];
 
       tableElement.forEach((element, index) => {
@@ -41,6 +44,12 @@ function standingsInfo (league_id) {
         total.innerText = tableElement[index].total;
         teamContainer[index][index].appendChild(total);
       });
+      axios.get(teamEventApi + leagueId)
+        .then(response => {
+          console.log(response);
+          const standingsTitle = response.data.events[0].strLeague;
+          document.getElementById('standing').innerHTML = ' Standings for ' + standingsTitle;
+        });
     })
     .catch(error => {
       console.log(error);
