@@ -1,4 +1,3 @@
-
 .nav {
   height: 50px;
   width: 100%;
@@ -34,15 +33,13 @@
   font-size: 18px;
 }
 
-
-
-
 .nav > .nav-links > a  {
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
   color: black;
 }
+
 .nav > .nav-links > form {
 display: inline-block;
 padding:0;
@@ -121,11 +118,7 @@ color: black;
   }
 } 
 
-
-
-
 /* ------ sections on dashboard ------- */
-
 
 .team-header {
   
@@ -137,21 +130,17 @@ color: black;
   overflow: hidden;
   
 
-     /* The image used */
-     background-image: url('/images/dashboard.jpg');
+  /* The image used */
+  background-image: url('/images/dashboard.jpg');
 
-     /* Full height */
-     height: 100%; 
- 
-     /* Create the parallax scrolling effect */
-     background-attachment: fixed;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
+  /* Full height */
+  height: 100%; 
 
-  
-
- 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .team-logo {
@@ -166,6 +155,7 @@ color: black;
   text-transform: uppercase;
   line-height: 1.2em;
   padding-top: 1.2%;
+  margin-top: 5vh;
 }
 
 hr {
@@ -176,15 +166,11 @@ hr {
   margin: 5%  auto 0 auto;
 }
 
-
 .team-information {
- margin-top: -50px;
- padding: 8%;
- overflow: hidden;
-
-
-box-sizing: border-box;
-
+  margin-top: -50px;
+  padding: 8%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .team-information, .content {
@@ -192,8 +178,8 @@ box-sizing: border-box;
   text-align: justify;
 }
 
- .team-information h1 {
-   text-align: center;
+.team-information h1 {
+  text-align: center;
  }
 
  h2 {
@@ -201,6 +187,7 @@ box-sizing: border-box;
   font-size: 30px;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 5vh;
 }
 
 h4 {
@@ -208,6 +195,7 @@ h4 {
   font-size: 40px;
   text-transform: uppercase;
   text-align: center; 
+  margin-top: 5vh;
 }
 
 .qr-code {
@@ -215,34 +203,29 @@ h4 {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
+  height: 10vh;
 }
 
-
-
 footer {
-  text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 25px;
-  padding: 20px;
+text-align: center;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 25px;
+padding: 20px;
 background: black;
 opacity: 0.8;
 color: white;
 clear: both;
-
-
 }
 
 .team-social-network {
   
-  font-size: 3em;
+ font-size: 3em;
  display: flex;
  align-items: center;
  justify-content: space-around;
  flex-wrap: wrap;
  padding-top: 10vh;
-
-
+  /* margin-top: 5vh */
 }
 
 .stadium-image {
@@ -258,13 +241,9 @@ clear: both;
   min-height: 300px;
 }
 
-
-
 /* upcoming page */
 
-
 #league {
-
   font-size: 2.5em;
   color: rgba(0, 66, 37, 0.8);
   padding-top: 3vh;
@@ -281,14 +260,13 @@ clear: both;
   font-size: 2em;
   padding-bottom: 3vh;
 }
+
 .vs {
   font-size: 3em;
   text-align: center;
   color: white;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   line-height: 7vh;
-
-  
 }
 
 .container-teams {
@@ -300,7 +278,6 @@ clear: both;
   max-width: 980px;
   margin: 0 auto;
   overflow: hidden;
-  
 
 }
 
@@ -311,10 +288,6 @@ clear: both;
   background-position: center;
 }
 
-.container-teams > span {
-  
-}
-
 .badgeimg {
   height: 150px;
 }
@@ -322,7 +295,6 @@ clear: both;
 .team-container {
   display: flex;
   justify-content: space-around;
-  
   text-align: center;
   color: black;
   font-weight: 900;
@@ -335,10 +307,13 @@ clear: both;
   color: #444;
   cursor: pointer;
   padding: 18px;
-  
   border: none;
   outline: none;
-  
+  /* width: 30%;
+  background: rgba(0, 66, 37, 0.8);
+  opacity: 0.8;
+  height: 5vh;
+  border-bottom: 1px solid black; */
 }
 
 

@@ -28,13 +28,13 @@ function mainTeamInfo (team, league_id, team_id) {
       const teamInstagramm = document.querySelector('.team-instagramm');
       teamInstagramm.setAttribute('href', `http://${response.data.teams[0].strInstagram}`);
 
-      const aTag = document.querySelectorAll('a');
-      const aTagParentElement = document.querySelector('.team-social-network');
-      aTag.forEach((element, index) => {
-      /*  if (aTag[index]href === '') {
-          aTagParentElement.removeChild(aTag[index])
-        } */
-      });
+      // const aTag = document.querySelectorAll('a');
+      // const aTagParentElement = document.querySelector('.team-social-network');
+      // aTag.forEach((element, index) => {
+      //   if (aTag[index].href === '') {
+      //     aTagParentElement.removeChild(aTag[index]);
+      //   }
+      // });
     })
     .catch(error => {
       console.log(error);
