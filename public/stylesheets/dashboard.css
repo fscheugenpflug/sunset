@@ -301,6 +301,12 @@ clear: both;
   font-size: 1.4em;
 }
 
+.team-container > img {
+ height: 100px;
+ width: 12.5%;
+ background: #eee;
+}
+
 .team-container > div {
   width: 12.5%;
   background-color: #eee;

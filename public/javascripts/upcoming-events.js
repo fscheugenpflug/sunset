@@ -4,7 +4,7 @@ function mainTeamEvents (team_id) {
   const teamEventApi = 'https://www.thesportsdb.com/api/v1/json/1/eventsnext.php?id=';
   const teamApi = 'https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=';
   console.log(team_id);
-
+  console.log(teamApi + team_id);
   axios
     .get(teamEventApi + team_id)
     .then(response => {
@@ -17,9 +17,7 @@ function mainTeamEvents (team_id) {
         homeTeam: [],
         awayTeam: []
       };
-
       console.log(response);
-      console.log(eventDuration);
 
       const title = response.data.events[0].strLeague;
       document.getElementById('league').innerHTML = title;
@@ -42,18 +40,16 @@ function mainTeamEvents (team_id) {
           result[0].forEach((elem, idx) => {
             const homeBadge = elem.data.teams[0].strTeamBadge;
             const awayBadge = result[1][idx].data.teams[0].strTeamBadge;
-
+            console.log(homeBadge);
             let teamElement = document.createElement('div');
             let domContainers = `<div class="container-teams">
           <img  class="badgeimg" src="${homeBadge}">
           <span class="vs">vs <br> ${gameDate[0]}</span>
-          
           <img class="badgeimg" src="${awayBadge}">
           </div>`;
             teamElement.innerHTML = domContainers;
             document.getElementById('up-coming-events').appendChild(teamElement.firstChild);
           });
-          console.log(gameDate);
         });
     })
     .catch(error => {

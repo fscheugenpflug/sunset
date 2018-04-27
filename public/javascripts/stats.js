@@ -3,24 +3,26 @@
 function standingsInfo (league_id) {
   const standingsApi = 'https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=';
   const teamEventApi = 'https://www.thesportsdb.com/api/v1/json/1/eventsnext.php?id=';
+  const teamApi = 'https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=';
 
   axios
     .get(standingsApi + league_id)
     .then(response => {
-      console.log(response);
       const tableDiv = document.querySelector('.standing-table');
       const tableElement = response.data.table;
+      const teamName = [];
+
       const leagueId = response.data.table[0].teamid;
       console.log(leagueId);
       const teamContainer = [];
+      const teamBadgeIcons = [];
 
       tableElement.forEach((element, index) => {
         var divTeamElement = document.createElement('div');
         divTeamElement.setAttribute('class', 'team-container');
         tableDiv.appendChild(divTeamElement);
         teamContainer.push(document.querySelectorAll('.team-container'));
-        const name = document.createElement('div');
-        name.innerText = tableElement[index].name;
+        const name = document.createElement('img');
         teamContainer[index][index].appendChild(name);
         const played = document.createElement('div');
         played.innerText = tableElement[index].played;
@@ -46,9 +48,26 @@ function standingsInfo (league_id) {
       });
       axios.get(teamEventApi + leagueId)
         .then(response => {
-          console.log(response);
           const standingsTitle = response.data.events[0].strLeague;
           document.getElementById('standing').innerHTML = ' Standings for ' + standingsTitle;
+          const icons = document.querySelectorAll('img'); '';
+
+          const promises = [];
+
+          for (var i = 0; i < tableElement.length; i++) {
+            teamName.push(tableElement[i].name);
+            promises.push(axios.get(teamApi + teamName[i]));
+          }
+
+          Promise.all(promises)
+            .then((result) => {
+              result.forEach((elem, idx) => {
+                let badge = elem.data.teams[0].strTeamBadge;
+                icons[idx].src = badge;
+                teamBadgeIcons.push(badge);
+                console.log(teamBadgeIcons);
+              });
+            });
         });
     })
     .catch(error => {
